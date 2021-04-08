@@ -1,6 +1,7 @@
 import React, {useContext, useEffect} from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMoon } from '@fortawesome/free-solid-svg-icons'
+import { faSun } from '@fortawesome/free-solid-svg-icons'
 import {Link} from 'react-router-dom'
 import {Context} from '../Context'
 
@@ -19,9 +20,9 @@ function Header() {
             }}>
             <FontAwesomeIcon 
                 className='icon' 
-                icon={faMoon}
+                icon={darkMode ? faSun : faMoon}
             />
-                Dark Mode
+                {darkMode ? 'Light Mode' : 'Dark Mode'}
             </span>
         </header>
     )

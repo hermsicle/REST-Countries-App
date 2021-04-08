@@ -1,6 +1,6 @@
 import React, {useContext, useEffect} from 'react'
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-// import { faMoon } from '@fortawesome/free-regular-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faMoon } from '@fortawesome/free-solid-svg-icons'
 import {Link} from 'react-router-dom'
 import {Context} from '../Context'
 
@@ -15,13 +15,12 @@ function Header() {
             </Link>
 
             <span className='dark-mode' onClick={ () =>  {
-                // console.log('dark mode on')
                     setDarkMode(!darkMode)
             }}>
-            {/* <FontAwesomeIcon 
+            <FontAwesomeIcon 
                 className='icon' 
                 icon={faMoon}
-            /> */}
+            />
                 Dark Mode
             </span>
         </header>

@@ -11,9 +11,11 @@ function Countries() {
         <>
         <Link to='/country'>
         <CountryCard onClick={ () => {
-            // console.log(country.population.toLocaleString('en'))
-            
-            setCountry(country)
+            if(country.name === 'Albania') {
+                alert("Error")
+            } else {
+                setCountry(country)
+            }
         }} 
             key={i} 
             img={country.flag} 

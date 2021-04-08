@@ -413,6 +413,7 @@ $box-shadow-dark: 1px 1px 8px black;
 
     .right-card {
       display: grid;
+      width: 50%;
       margin-left: 120px;
       grid-template: 150px 200px 50px / 1fr 1fr;
       grid-template-areas: 

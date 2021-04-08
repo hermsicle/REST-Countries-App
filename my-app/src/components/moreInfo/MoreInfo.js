@@ -92,11 +92,7 @@ function MoreInfo(props) {
                                             key={i} 
                                             className='border-countries-btn'
                                             onClick={ () => {
-                                                //set the country clicked to user input
                                                 setBorderCountry(country)
-                                                //go to context to retrieve the new input
-                                                //do a fetch call with the new input
-                                                //set the fetch call input as new country 
                                             }}
                                         > 
                                             { country }

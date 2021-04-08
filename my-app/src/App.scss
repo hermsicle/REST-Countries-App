@@ -1,0 +1,448 @@
+$font-stack: 'Nunito Sans', sans-serif;
+
+$dark-mode-elements: hsl(209, 23%, 22%); 
+$dark-mode-background: hsl(207, 26%, 17%);
+$light-mode-text: hsl(200, 15%, 8%);
+$light-mode-input: hsl(0, 0%, 52%);
+$light-mode-background: hsl(0, 0%, 98%);
+$white: hsl(0, 0%, 100%);
+$pink: #f8a5c2;
+$red: #c44569;
+// White is for dark mode text and light-mode-elements
+
+$border: 1px solid black;
+$border2: 2px solid green;
+$box-shadow: 1px 1px 8px rgb(221, 218, 218);
+$box-shadow-dark: 1px 1px 8px black;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// body {
+//   border: 10px solid green;
+// }
+
+
+.home.darkmode {
+  background: $dark-mode-background;
+  height: 100%;
+}
+
+.App {
+  font: 100% $font-stack;
+  background: $light-mode-background;
+  height: 100vh;
+}
+.App.darkmode {
+  font: 100% $font-stack;
+  background: $dark-mode-background;
+  color: $white;
+  height: 100%;
+}
+
+
+.header.darkmode {
+  background: $dark-mode-elements;
+  color: $white;
+  box-shadow: $box-shadow-dark;
+
+  a {
+    color: $white;
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 85px;
+  width: 100%;
+  // border-bottom: $border;
+  color: $light-mode-text;
+  background: $white;
+  box-shadow: $box-shadow;
+
+  a {
+    text-decoration: none;
+    color: $light-mode-text;
+  }
+
+  h1 {
+    font-size: 20px;
+    margin-left: 10px;
+    // border: $border;
+    cursor: pointer;
+  }
+
+  span {
+    margin-right: 10px;
+    cursor: pointer;
+    // border: $border;
+    font-weight: 600;
+    font-size: 1rem;
+  }
+
+  span .icon {
+    margin-right: 10px;
+  }
+}
+
+.form-container {
+  margin-bottom: 30px;
+}
+
+// Dark mode search form
+.search-form.darkmode {
+  background: $dark-mode-elements;
+  color: $white;
+  box-shadow: $box-shadow-dark;
+
+  .search {
+    color: $white;
+  }
+  input {
+    background: $dark-mode-elements;
+    color: $white;
+  }
+  input::placeholder {
+    color: $white;
+  }
+}
+
+.search-form {
+  // border: $border;
+  width: 90%;
+  max-width: 357px;
+  height: 52px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  background: $white;
+  margin-top: 24px;
+  box-shadow: $box-shadow;
+  position: relative;
+
+  button {
+    background: none;
+    height: 100%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+  .search {
+    // border: $border;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: $light-mode-input;
+    margin-left: 2rem;
+    margin-right: 47px;
+  }
+
+  input {
+    color: $light-mode-input;
+    width: 100%;
+    border: none;
+    outline: none;
+    height: 100%;
+    font-size: 1rem;
+  }
+  input::placeholder {
+    color: $light-mode-input;
+  }
+  .error-message {
+    // border: $border;
+    position: absolute;
+    bottom: -40px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    text-align: center;
+    background: $pink;
+    color: $red;
+    padding: 0.5rem 0;
+    box-shadow: $box-shadow;
+  }
+}
+
+// Dark mode .filter-form
+.filter-form.darkmode {
+  select {
+    background: $dark-mode-elements;
+    color: $white;
+    box-shadow: $box-shadow-dark;
+  }
+}
+.filter-form {
+  // border: $border;
+  height: 52px;
+  width: 210px;
+  margin: 42px auto 0px auto;
+  position: relative;
+
+  select {
+    height: 100%;
+    width: 100%;
+    box-shadow: $box-shadow;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    padding: 0px 22px;
+    background: $white;
+  }
+}
+
+@media (min-width: 1200px) {
+  .form-container {
+    display :flex;
+    align-items: center;
+    // border: $border;
+    max-width: 1280px;
+    margin: 0 auto;
+    height: 150px;
+    justify-content: space-between;
+  }
+  .search-form {
+    margin: 0 0 0 23px;
+  }
+  .filter-form {
+    margin: 0 23px 0 0;
+  }
+}
+
+.all-countries-container {
+  // border: 5px solid green;
+  max-width: 1280px;
+  margin: 0 auto;
+  // padding-bottom: 1000px;
+
+  a {
+    // border: $border2;
+    // height: 350px;
+    // width: 275px;
+    text-decoration: none;
+    color: $light-mode-text;
+    display: flex;
+    margin: 1rem;
+  }
+  .country-card.darkmode {
+    background: $dark-mode-elements;
+    color: $white;
+    box-shadow: $box-shadow-dark;
+  }
+  .country-card {
+    // border: $border;
+    // max-height: 350px;
+    max-height: 400px;
+    max-width: 275px;
+    height: 100%;
+    width: 100%;
+    margin: 0px auto 38px auto;
+    background: $white;
+    box-shadow: $box-shadow;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    cursor: pointer;
+
+    %padding-left {
+      padding-left: 25px;
+      // border: $border;
+    }
+
+    img {
+      width: 100%;
+      height: 165px;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+    h1 {
+      font-size: 1.25rem;
+      font-weight: 800;
+      margin: 1rem 0;
+      @extend %padding-left;
+    }
+    span {
+      font-weight: 600;
+    }
+    p {
+      @extend %padding-left;
+      margin-bottom: 0.5rem;
+    }
+  }
+}
+
+@media (min-width: 800px) {
+  .all-countries-container {
+    max-width: 600px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1000px) {
+  .all-countries-container {
+    max-width: 900px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (min-width: 1200px) {
+  .all-countries-container {
+    max-width: 1280px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .country-card {
+    margin: 0;
+  }
+}
+
+.more-info.darkmode {
+  height: 100%;
+  .go-back-btn {
+    background: $dark-mode-elements;
+    box-shadow: $box-shadow-dark;
+    color: $white;
+  }
+  .more-info-card 
+  .right-card 
+  .border-countries 
+  .border-countries-btn {
+    background: $dark-mode-elements;
+    box-shadow: $box-shadow-dark;
+    color: $white;
+  }
+}
+
+.more-info {
+  // border: $border;
+  max-width: 1280px;
+  margin: 0 auto;
+  width: 90%;
+
+  .go-back-btn {
+    margin-top: 38px;
+    height: 35px;
+    width: 105px;
+    background: $white;
+    border: none;
+    box-shadow: $box-shadow;
+    font-size: 1rem;
+    cursor: pointer;
+
+    .left-arrow {
+      margin-right: 0.5rem;
+    }
+  }
+  .more-info-card {
+    // border: $border2;
+
+    .country-flag {
+      // width: 322px;
+      width: 100%;
+      margin: 63px 0 55px 0;
+    }
+    h1 {
+      // border: $border;
+      // margin-bottom: 25px;
+    }
+    .main-info, 
+    .sub-info {
+      // border: $border;
+      span {
+        font-weight: 600;
+      }
+    }
+    .main-info {
+      p {
+        margin: 1rem 0;
+      }
+    }
+    .sub-info {
+      margin-top: 43px;
+      p {
+        margin: 1rem 0;
+      }
+    }
+    .border-countries {
+      // border: $border;
+      padding-bottom: 50px;
+      margin-top: 43px;
+      p {
+        font-weight: 600;
+        margin: 1rem 0;
+      }
+      .btn-container {
+        width: 100%;
+        // border: $border;
+        display: flex;
+        flex-wrap: wrap;
+        // justify-content: space-between;
+
+        .border-countries-btn {
+          background: $white;
+          border: none;
+          box-shadow: $box-shadow;
+          height: 50px;
+          width: 150px;
+          cursor: pointer;
+          margin: 0.5rem ;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 1100px) {
+  .more-info.darkmode {
+    // border: 5px solid green;
+  }
+  .more-info-card {
+    display: flex;
+
+    .left-card {
+      width: 50%;
+
+      .country-flag {
+        width: 100%;
+        height: 400px;
+      }
+    }
+
+    .right-card {
+      display: grid;
+      margin-left: 120px;
+      grid-template: 150px 200px 50px / 1fr 1fr;
+      grid-template-areas: 
+        "name name"
+        "left right"
+        "border border";
+      
+      h1 {
+        grid-area: name;
+        margin-top: 63px;
+      }
+      .main-info {
+        grid-area: left;
+        // border: $border;
+      }
+      .sub-info {
+        grid-area: right;
+        margin-top: 0;
+        // border: $border;
+        margin-left: 50px;
+      }
+      .border-countries {
+        grid-area: border;
+      }
+      
+    }
+  }
+}
+
+.footer.darkmode {
+  background: $dark-mode-background;
+  height: 80vh;
+}

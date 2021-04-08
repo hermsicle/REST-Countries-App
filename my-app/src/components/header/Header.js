@@ -15,7 +15,7 @@ function Header() {
             </Link>
 
             <span className='dark-mode' onClick={ () =>  {
-                    setDarkMode(!darkMode)
+                setDarkMode(!darkMode)
             }}>
             <FontAwesomeIcon 
                 className='icon' 
